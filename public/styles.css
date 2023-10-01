@@ -1,0 +1,17 @@
+@font-face {
+    font-family: Notosans;
+    src: local(''), url(font/lao/NotoSansLao-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: Notosans-semibold;
+    src: local(''), url(font/lao/NotoSansLao-SemiBold.ttf) format('truetype');
+}
+
+html {
+    font-size: 100%;
+}
+
+* {
+    font-family: "Notosans", sans-serif;
+}

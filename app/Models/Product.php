@@ -15,19 +15,13 @@ class Product extends Model
     protected $table = 'products';
 
     public function brand(){
-        return $this->belongsTo(Brand::class);
+        return $this->belongsTo(Brand::class,'brand_id','id');
     }
 
-    public function product(){
-        return $this->belongsTo(Product::class);
-    }
 
     public function comment(){
         return $this->hasMany(Comment::class);
     }
 
-    public function detail() {
-        return $this->hasMany(Detail::class);
-    }
 
 }

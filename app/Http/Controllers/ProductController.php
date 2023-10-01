@@ -53,7 +53,7 @@ class ProductController extends Controller
 
         $products = new Product();
         $products->name = $request->name;
-        $products->brand = $request->brand;
+        $products->brand_id = $request->brand;
         $products->image = $product_image;
         $products->description = $request->description;
         $products->price = $request->price;
@@ -93,7 +93,7 @@ class ProductController extends Controller
         $success = $image->move($upload_path, $imageSaveAs);
 
         $product->name = $request->name;
-        $product->brand = $request->brand;
+        $product->brand_id = $request->brand;
         $product->image = $product_image;
         $product->description = $request->description;
         $product->price = $request->price;

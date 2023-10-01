@@ -55,4 +55,7 @@ Route::get('/about', function () {
     Route::get('/update-product/{id}', [ProductController::class,'updateProduct']);
 
     Route::get('/delete-product/{id}', [ProductController::class,'delete']);
+
+
+    Route::get('/client', [\App\Http\Controllers\FrontController::class,'index']);
 //});
