@@ -6,19 +6,19 @@
         <div class="card-body">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12"></div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <h1>ຟອມປ້ອນຂໍ້ມູນ <i class="fa fa-mobile" aria-hidden="true"></i></h1>
+                    </div>
 
-                    <div class="col-md-6 col-sm-6 col-xs-12 ">
+                    <div class="col-md-12 col-sm-12 col-xs-12 ">
                         <form class="form-container" method="POST" action="{{ route('insert-product') }}"
                               enctype="multipart/form-data">
                             {{ csrf_field() }}
 
-                            <h1>ຟອມປ້ອນຂໍ້ມູນ <i class="fa fa-mobile" aria-hidden="true"></i></h1>
-
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col-md-7 col-sm-7 col-xs-12">
-                                        <input id="image" type="file" class="form-control pb-5" name="image" required>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input id="image" type="file" class="form-control  form-control-user"  name="image" required>
 
                                         @if ($errors->has('image'))
                                             <span class="help-block">
@@ -33,8 +33,8 @@
                                 <div class="row">
                                     <label for="name" class="col-md-2 control-label">ຊື່ສິນຄ້າ</label>
 
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="name" type="text" class="form-control" name="name"
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input id="name" type="text" class="form-control  form-control-user" name="name"
                                                value="{{ old('name') }}"
                                                required autofocus>
 
@@ -51,11 +51,11 @@
                                 <div class="row">
                                     <label for="brand" class="col-md-2 control-label">ແບຣນ</label>
 
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
 
-                                        <select class="form-control" aria-label="Default select example" name="brand"  id="brand" >
+                                        <select class="form-control form-control-user" aria-label="Default select example" name="brand"  id="brand" >
+                                            <option>ກະລຸນາເລືອກ</option>
                                             @foreach($brand as $item)
-                                                <option>ກະລຸນາເລືອກ</option>
                                                 <option value="{{ $item->id }}">{{ $item->name }}</option>
                                             @endforeach
                                         </select>
@@ -73,8 +73,8 @@
                                 <div class="row">
                                     <label for="description" class="col-md-2 control-label">ລາຍລະອຽດ</label>
 
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="description" type="text" class="form-control" name="description"
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input id="description" type="text" class="form-control form-control-user" name="description"
                                                value="{{ old('description') }}" required autofocus>
 
                                         @if ($errors->has('description'))
@@ -90,9 +90,9 @@
                                 <div class="row">
                                     <label for="price" class="col-md-2 control-label">ລາຄາ</label>
 
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
 
-                                        <input id="price" type="number" class="form-control" name="price"
+                                        <input id="price" type="number" class="form-control form-control-user" name="price"
                                                value="{{ old('price') }}" required autofocus>
 
                                         @if ($errors->has('price'))
@@ -108,10 +108,9 @@
                                 <div class="row">
                                     <label for="discount" class="col-md-2 control-label">ສ່ວນຫລຸດ</label>
 
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="discount" type="number" class="form-control " name="discount"
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input id="discount" type="number" class="form-control form-control-user " name="discount"
                                                value="{{ old('discount') }}" required autofocus>
-                                        <span class="fas fa-percentage position-absolute icon-position mt-3"></span>
 
                                         @if ($errors->has('discount'))
                                             <span class="help-block">
@@ -126,8 +125,8 @@
                                 <div class="row">
                                     <label for="stock" class="col-md-2 control-label">ຈຳນວນ</label>
 
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input id="stock" type="text" class="form-control" name="stock"
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <input id="stock" type="text" class="form-control form-control-user" name="stock"
                                                value="{{ old('stock') }}" required autofocus>
 
                                         @if ($errors->has('stock'))

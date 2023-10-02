@@ -70,6 +70,13 @@
             </a>
         </li>
 
+        <li class="nav-item ">
+            <a class="nav-link" href="{{ route('comment-index') }}">
+                <i class="fas fa-fw fa-user"></i>
+                <span>{{ __('ຈັດການຄຳເຫັນ') }}</span>
+            </a>
+        </li>
+
 
 
         <li class="nav-item ">

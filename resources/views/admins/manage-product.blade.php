@@ -31,15 +31,29 @@
                                             <a href="#">{{$product->name}}</a>
                                         </h4>
                                         <h4 class="card-title">
-                                            {{$product->price}}
+                                            ລາຄາ: {{number_format( $product->price, 2)}}
                                         </h4>
-                                        <p class="card-text">{{ $product->description }}</p>
+                                        <small class="card-title">
+                                            ສ່ວນຫລຸດ: {{number_format( $product->discout, 2)}}
+                                        </small>
+                                        <p class="card-text">ຈຳນວນ: {{ $product->stock }}</p>
+                                        <p class="card-text">ລາຍລະອຽດ: {{ $product->description }}</p>
                                         <a href="/update-product/{{$product->id}}">
-                                            <button class="btn btn-primary mr-2">ແກ້ໄຂ</button>
+                                            <button
+                                                type="button"
+                                                class="btn btn-outline-primary ml-2">
+                                                <i class="fa fa-edit"></i>
+                                                ແກ້ໄຂ
+                                            </button>
+
                                         </a>
 
                                         <a href="/delete-product/{{$product->id}}">
-                                            <button class="btn btn-danger">ລືບ</button>
+                                            <button type="button"
+                                                    class="btn btn-outline-danger ml-2">
+                                                <i class="fa fa-trash"></i>
+                                                ລືບ
+                                            </button>
                                         </a>
                                     </div>
                                 </div>

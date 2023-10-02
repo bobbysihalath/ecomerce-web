@@ -20,7 +20,7 @@ class Product extends Model
 
 
     public function comment(){
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(\App\Models\Comment::class);
     }
 
 

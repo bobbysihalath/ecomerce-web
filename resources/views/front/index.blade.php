@@ -23,23 +23,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">ໜ້າຫຼັກ</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ເບິງສິນຄ້າ</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">All Products</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                        <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                    </ul>
-                </li>
+{{--                <li class="nav-item dropdown">--}}
+{{--                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">ເບິງສິນຄ້າ</a>--}}
+{{--                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">--}}
+{{--                        <li><a class="dropdown-item" href="#!">All Products</a></li>--}}
+{{--                        <li><hr class="dropdown-divider" /></li>--}}
+{{--                        <li><a class="dropdown-item" href="#!">Popular Items</a></li>--}}
+{{--                        <li><a class="dropdown-item" href="#!">New Arrivals</a></li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
             </ul>
-            <form class="d-flex">
-                <button class="btn btn-outline-dark" type="submit">
-                    <i class="bi-cart-fill me-1"></i>
-                    Cart
-                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                </button>
-            </form>
+{{--            <form class="d-flex">--}}
+{{--                <button class="btn btn-outline-dark" type="submit">--}}
+{{--                    <i class="bi-cart-fill me-1"></i>--}}
+{{--                    Cart--}}
+{{--                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>--}}
+{{--                </button>--}}
+{{--            </form>--}}
         </div>
     </div>
 </nav>
@@ -77,13 +77,13 @@
                                 <div class="bi-star-fill"></div>
                             </div>
                             <!-- Product price-->
-                            <span class="text-muted text-decoration-line-through"> {{ $item->discount }}%</span>
-                            {{ $item->price }} LAK
+                            ສ່ວນຫຼຸດ:<span class="text-muted text-decoration-line-through"> {{ number_format($item->discount )}}</span><br/>
+                            {{ number_format($item->price) }} LAK
                         </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">ເບິ່ງລາຍລະອຽດ</a></div>
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/client/detail/{{$item->id}}">ເບິ່ງລາຍລະອຽດ</a></div>
                     </div>
                 </div>
             </div>

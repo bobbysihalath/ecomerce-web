@@ -2,15 +2,16 @@
 
 @section('main-content')
     <!-- Page Heading -->
-    <div class="card shadow">
-        <div class="card-body ">
+    <div class="container-fluid">
+        <div class="panel-body">
             <div class="d-flex justify-content-between">
-                <h1 class="h3 mb-4 text-gray-800">{{ __('ຈັດການຂໍ້ມູນແບນ') }}</h1>
-                <a class="btn btn-info" href="{{ url('/insert-brand') }}">ເພິ່ມຂໍ້ມູນ</a>
+                <h2>ຈັດການຂໍ້ມູນແບຣນ</h2>
+                <a href="{{ url('/insert-brand') }}" class="float-right btn btn-info"><i class="fa fa-plus"></i>&nbsp;ເພິ່ມຂໍ້ມູນ</a>
             </div>
-
         </div>
+        <br/>
     </div>
+
 
 
 
@@ -38,11 +39,18 @@
                                 <td>{{ $brand->name}}</td>
 
                                 <td><a href="/update-brand/{{$brand->id}}">
-                                        <button class="btn btn-primary">Update</button>
+                                        <button
+                                            type="button"
+                                            class="btn btn-outline-primary btn-circle  btn-circle ml-2">
+                                            <i class="fa fa-edit"></i>
+                                        </button>
                                     </a>
                                 </td>
                                 <td><a href="/delete-brand/{{$brand->id}}">
-                                        <button class="btn btn-danger">Delete</button>
+                                        <button type="button"
+                                                class="btn btn-outline-warning btn-circle  btn-circle ml-2">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
                                     </a>
                                 </td>
                             </tr>

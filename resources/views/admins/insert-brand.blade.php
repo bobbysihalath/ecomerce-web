@@ -2,38 +2,38 @@
 
 @section('main-content')
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 col-lg-12 col-md-9">
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <div class="row">
 
-                    <div class="panel-body">
-                        <h2 class="text-center" style="margin-right: 25rem">ເພິ່ມຂໍ້ມູນແບຣນ</h2>
+                            <div class="col-lg-12">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">{{ __('ເພິ່ມຂໍ້ມູນຊື່ແບຣນ') }}</h1>
+                                    </div>
 
-                        <form class="form-horizontal" method="POST" action="{{ route('insert-brand') }}" enctype="multipart/form-data">
-                            {{ csrf_field() }}
 
-                            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                <label for="name" class="col-md-4 control-label">ຊື່</label>
+                                    <form method="POST" action="{{ route('insert-brand') }}" enctype="multipart/form-data" class="user">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                                <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user" name="name" placeholder="{{ __('ຊື່ແບຣນ') }}" value="{{ old('name') }}" required autofocus>
+                                        </div>
 
-                                    @if ($errors->has('name'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                    @endif
+
+
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary btn-user btn-block">
+                                                {{ __('ເພິ່ມຂໍ້ມູນ') }}
+                                            </button>
+                                        </div>
+                                    </form>
+
                                 </div>
                             </div>
-
-                            <div class="form-group">
-                                <div class="col-md-6 col-md-offset-4">
-                                    <button type="submit" class="btn btn-primary" style="margin-left: 12rem  ">
-                                        ເພິ່ມຂໍ້ມູນ
-                                    </button>
-                                </div>
-                            </div>
-
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
