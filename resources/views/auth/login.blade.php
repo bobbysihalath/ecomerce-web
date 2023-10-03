@@ -12,6 +12,11 @@
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">{{ __('ຍິນດີຕອນຮັບເຂົ້າສູ່ລະບົບ') }}</h1>
+
+                                            <a class="small" href="{{ url('/client') }}">
+                                                {{ __('ເຂົ້າສູ່ເມນູເບື້ອງໜ້າ!') }}
+                                            </a>
+
                                     </div>
 
                                     @if ($errors->any())
@@ -70,6 +75,7 @@
                                             <a class="small" href="{{ route('register') }}">{{ __('ສ້າງຊື່ຜູ້ໃຊ້ງານ!') }}</a>
                                         </div>
                                     @endif
+
                                 </div>
                             </div>
                         </div>

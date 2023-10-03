@@ -116,7 +116,7 @@
                         <form method="POST" action="{{ url('/client/comment') }}">
                              @csrf
                             <div class="d-flex flex-row align-items-start">
-                                <textarea class="form-control ml-1 shadow-none textarea" name="comment" required></textarea>
+                                <textarea class="form-control ml-1 shadow-none textarea" name="comment" ></textarea>
                                 <input type="hidden" name="product_id" value="{{$product->id}}">
                             </div>
                             <div class="mt-2 text-right">
@@ -124,6 +124,12 @@
                                     <a href="">
                                         <button class="btn btn-primary btn-sm shadow-none" type="submit">
                                             ເພິ່ມຄຳເຫັນ
+                                        </button>
+                                    </a>
+                                @else
+                                    <a  class="text-center" href="/login">
+                                        <button class="btn btn-primary btn-sm shadow-none" type="button">
+                                            <i class="fa fa-sign-in"></i>ເຂົ້າສູ່ລະບົບ
                                         </button>
                                     </a>
                                 @endauth
